@@ -47,6 +47,14 @@ OVOS_STORE_FEED_URL = "https://openvoiceos.github.io/OVOS-skills-store/skills.js
 # "provider for X").
 PROVIDER_PATTERN = re.compile(r"provider for ([\w.-]+)", re.IGNORECASE)
 
+# PyPI packages that indicate a skill fetches content over the open
+# internet (not a LAN protocol like zeroconf, which never implies
+# "needs internet") - used as a fallback signal only when a skill's
+# own description doesn't already say "offline" one way or the
+# other. Deliberately a curated, conservative list, not "any network
+# library" - avoids over-flagging.
+ONLINE_LIBS = {"requests", "bs4", "beautifulsoup4", "feedparser", "aiohttp", "httpx"}
+
 
 def gh_json(*args):
     result = subprocess.run(["gh", *args], capture_output=True, text=True, check=True)
@@ -74,19 +82,22 @@ def find_candidate_repos():
     return sorted(names)
 
 
-def pypi_version(package_name):
-    """Latest published version, or None if not on PyPI at all."""
+def pypi_info(package_name):
+    """Returns (version, requires_dist) for the latest release, or
+    (None, []) if not on PyPI at all. requires_dist feeds the
+    connectivity classifier's fallback signal - see ONLINE_LIBS."""
     url = f"https://pypi.org/pypi/{package_name}/json"
     try:
         with urllib.request.urlopen(url, timeout=10) as resp:
             data = json.load(resp)
-        return data["info"]["version"]
+        info = data["info"]
+        return info["version"], (info.get("requires_dist") or [])
     except urllib.error.HTTPError as e:
         if e.code == 404:
-            return None
+            return None, []
         raise
     except Exception:
-        return None
+        return None, []
 
 
 def fetch_skill_json(repo):
@@ -133,6 +144,61 @@ def extract_pipeline(description):
     return match.group(1).rstrip(".")
 
 
+def classify_connectivity(description, requires_dist):
+    """Returns "offline", "hybrid", "online", or None (unknown).
+
+    Primary signal is the skill's OWN description, since the author
+    is the authority on their own skill's connectivity - "fully
+    offline"/"no internet" is treated as a strong, deliberate claim.
+    "hybrid" requires the description to ALSO mention an online
+    fallback/optional online component alongside the offline claim
+    (e.g. sound-like: "bundled offline sounds...with an optional
+    freesound.org online fallback").
+
+    Falls back to PyPI's requires_dist only when the description
+    doesn't address connectivity at all - if a skill depends on a
+    known internet-fetching library (see ONLINE_LIBS) and never
+    claims to be offline, it's classified "online". This is
+    deliberately a fallback, not the primary signal: a skill could
+    depend on `requests` for something that never touches the
+    network (rare but possible), so the author's own explicit claim
+    always wins when present."""
+    desc_lower = (description or "").lower()
+    mentions_offline = bool(re.search(r"\boffline\b|\bno internet\b", desc_lower))
+    mentions_online_fallback = bool(
+        re.search(r"online fallback|optional.*online|fallback.*online", desc_lower)
+    )
+
+    if mentions_offline and mentions_online_fallback:
+        return "hybrid"
+    if mentions_offline:
+        return "offline"
+
+    reqs = set()
+    for r in requires_dist:
+        pkg = re.split(r"[<>=;\[\s]", r)[0].strip().lower()
+        reqs.add(pkg)
+    if reqs & ONLINE_LIBS:
+        return "online"
+
+    return None
+
+
+def fetch_requires_api_key(repo):
+    """Checks settingsmeta.json (the standard OVOS convention for
+    settings shown in companion apps) for an api_key-shaped field -
+    a mechanical signal, not text-mined from the description, since
+    "API key" phrasing in a description is inconsistent (one skill
+    says "no API key", meaning the opposite of what a naive keyword
+    match would suggest)."""
+    try:
+        content = gh_json("api", f"repos/{GITHUB_USER}/{repo}/contents/settingsmeta.json")
+        text = base64.b64decode(content["content"]).decode("utf-8", errors="ignore").lower()
+        return "api_key" in text or "api key" in text
+    except subprocess.CalledProcessError:
+        return False
+
+
 def main():
     SKILLS_DIR.mkdir(exist_ok=True)
     DOCS_DIR.mkdir(exist_ok=True)
@@ -151,7 +217,7 @@ def main():
             continue
 
         package_name = skill_json.get("package_name")
-        version = pypi_version(package_name) if package_name else None
+        version, requires_dist = pypi_info(package_name) if package_name else (None, [])
         if version is None:
             print(f"  SKIP {repo}: not published on PyPI (package_name={package_name})")
             continue
@@ -171,6 +237,8 @@ def main():
             "author": skill_json.get("author", GITHUB_USER),
             "in_ovos_store": package_name in store_package_names,
             "pipeline": extract_pipeline(description),
+            "connectivity": classify_connectivity(description, requires_dist),
+            "requires_api_key": fetch_requires_api_key(repo),
         }
         entries.append(entry)
 
@@ -180,7 +248,9 @@ def main():
             f.write("\n")
         store_note = " [in OVOS Store]" if entry["in_ovos_store"] else ""
         pipeline_note = f" [pipeline: {entry['pipeline']}]" if entry["pipeline"] else ""
-        print(f"  OK   {repo} -> {out_name} (v{version}){store_note}{pipeline_note}")
+        conn_note = f" [{entry['connectivity']}]" if entry["connectivity"] else ""
+        key_note = " [needs API key]" if entry["requires_api_key"] else ""
+        print(f"  OK   {repo} -> {out_name} (v{version}){store_note}{pipeline_note}{conn_note}{key_note}")
 
     entries.sort(key=lambda e: (e["name"] or "").lower())
     with open(FEED_PATH, "w") as f:

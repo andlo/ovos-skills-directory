@@ -24,5 +24,7 @@
   "license": "GPL-3.0-or-later",
   "author": "andlo",
   "in_ovos_store": false,
-  "pipeline": null
+  "pipeline": null,
+  "connectivity": "offline",
+  "requires_api_key": false
 }

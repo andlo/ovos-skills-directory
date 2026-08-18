@@ -6,8 +6,6 @@
   --accent: #1f7ae0;
   --border: #e2e5ea;
   --radius: 14px;
-  --store-badge-bg: #eaf4ff;
-  --store-badge-text: #1f7ae0;
 }
 
 * { box-sizing: border-box; }
@@ -118,21 +116,30 @@ main {
   font-size: 0.8rem;
 }
 
-.store-badge {
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.badge {
   display: inline-flex;
   align-items: center;
   gap: 0.3rem;
-  background: var(--store-badge-bg);
-  color: var(--store-badge-text);
   border-radius: 999px;
   padding: 0.15rem 0.55rem;
   font-size: 0.72rem;
   font-weight: 600;
-  margin-top: 0.3rem;
   white-space: nowrap;
 }
 
-.store-badge svg { width: 12px; height: 12px; }
+.badge svg { width: 12px; height: 12px; }
+
+.badge-store { background: #eaf4ff; color: #1f7ae0; }
+.badge-offline { background: #eafbf0; color: #1e8a4c; }
+.badge-hybrid { background: #fff4e5; color: #b5680b; }
+.badge-online { background: #fdeceb; color: #c73e35; }
+.badge-key { background: #f1eefc; color: #6a3fd6; }
 
 .description {
   color: var(--muted);

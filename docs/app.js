@@ -8,6 +8,12 @@ const STORE_BADGE_SVG = `<svg viewBox="0 0 20 20" fill="currentColor" aria-hidde
   <path fill-rule="evenodd" d="M16.7 5.3a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.4 0l-3.5-3.5a1 1 0 1 1 1.4-1.4l2.8 2.8 6.3-6.3a1 1 0 0 1 1.4 0z" clip-rule="evenodd"/>
 </svg>`;
 
+const CONNECTIVITY_META = {
+  offline: { label: "Offline", cls: "badge-offline" },
+  hybrid: { label: "Hybrid", cls: "badge-hybrid" },
+  online: { label: "Online", cls: "badge-online" },
+};
+
 function escapeHtml(str) {
   const div = document.createElement("div");
   div.textContent = str ?? "";
@@ -24,15 +30,27 @@ function pipelineLabel(pipelinePackage) {
     .join(" ") + " Pipeline";
 }
 
+function renderBadges(skill) {
+  const badges = [];
+  if (skill.in_ovos_store) {
+    badges.push(`<span class="badge badge-store">${STORE_BADGE_SVG} OVOS Store</span>`);
+  }
+  const conn = CONNECTIVITY_META[skill.connectivity];
+  if (conn) {
+    badges.push(`<span class="badge ${conn.cls}">${conn.label}</span>`);
+  }
+  if (skill.requires_api_key) {
+    badges.push(`<span class="badge badge-key">API key</span>`);
+  }
+  return badges.join("");
+}
+
 function renderCard(skill) {
   const examples = (skill.examples || []).slice(0, 3)
     .map((e) => `<li>"${escapeHtml(e)}"</li>`).join("");
   const tags = (skill.tags || [])
     .map((t) => `<span class="tag">${escapeHtml(t)}</span>`).join("");
   const icon = skill.icon || "";
-  const storeBadge = skill.in_ovos_store
-    ? `<span class="store-badge">${STORE_BADGE_SVG} In OVOS Store</span>`
-    : "";
 
   return `
     <article class="card">
@@ -42,9 +60,9 @@ function renderCard(skill) {
         <div class="card-head-text">
           <h2>${escapeHtml(skill.name)}</h2>
           <div class="version">v${escapeHtml(skill.pypi_version)}</div>
-          ${storeBadge}
         </div>
       </div>
+      <div class="badges">${renderBadges(skill)}</div>
       <p class="description">${escapeHtml(skill.description)}</p>
       <ul class="examples">${examples}</ul>
       <div class="tags">${tags}</div>
@@ -81,6 +99,16 @@ function render(list) {
   const { pipelines, standalone } = groupByPipeline(list);
   let html = "";
 
+  // Standalone skills first (requested), pipeline groups after.
+  if (standalone.length) {
+    html += `
+      <section class="group">
+        ${pipelines.size ? '<h2 class="group-title">Standalone Skills</h2>' : ""}
+        <div class="card-grid">${standalone.map(renderCard).join("")}</div>
+      </section>
+    `;
+  }
+
   for (const [pipelinePackage, members] of pipelines) {
     html += `
       <section class="group">
@@ -90,15 +118,6 @@ function render(list) {
           <code>${escapeHtml(pipelinePackage)}</code>
         </p>
         <div class="card-grid">${members.map(renderCard).join("")}</div>
-      </section>
-    `;
-  }
-
-  if (standalone.length) {
-    html += `
-      <section class="group">
-        ${pipelines.size ? '<h2 class="group-title">Standalone Skills</h2>' : ""}
-        <div class="card-grid">${standalone.map(renderCard).join("")}</div>
       </section>
     `;
   }

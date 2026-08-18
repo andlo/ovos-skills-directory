@@ -1,7 +1,7 @@
 {
   "skill_id": "ovos-skill-intercom.andlo",
   "name": "Intercom",
-  "description": "LAN intercom - send a spoken message to a named OVOS device on the same network. Speak-only, never executes commands on the receiving device.",
+  "description": "LAN intercom - send a spoken message to a named OVOS device on the same local network. Fully offline, no internet needed. Speak-only, never executes commands on the receiving device.",
   "examples": [
     "set intercom name to living room",
     "set intercom code to four seven two nine",
@@ -20,5 +20,7 @@
   "license": "GPL-3.0-or-later",
   "author": "andlo",
   "in_ovos_store": false,
-  "pipeline": null
+  "pipeline": null,
+  "connectivity": "offline",
+  "requires_api_key": false
 }

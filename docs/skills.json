@@ -20,7 +20,9 @@
     "license": "GPL-3.0-or-later",
     "author": "andlo",
     "in_ovos_store": false,
-    "pipeline": "ovos-common-reading-pipeline-plugin"
+    "pipeline": "ovos-common-reading-pipeline-plugin",
+    "connectivity": "online",
+    "requires_api_key": false
   },
   {
     "skill_id": "ovos-skill-andersen-tales.andlo",
@@ -45,7 +47,9 @@
     "license": "GPL-3.0-or-later",
     "author": "andlo",
     "in_ovos_store": false,
-    "pipeline": "ovos-common-reading-pipeline-plugin"
+    "pipeline": "ovos-common-reading-pipeline-plugin",
+    "connectivity": "online",
+    "requires_api_key": false
   },
   {
     "skill_id": "ovos-skill-andrew-lang-tales.andlo",
@@ -69,7 +73,9 @@
     "license": "GPL-3.0-or-later",
     "author": "andlo",
     "in_ovos_store": false,
-    "pipeline": "ovos-common-reading-pipeline-plugin"
+    "pipeline": "ovos-common-reading-pipeline-plugin",
+    "connectivity": "online",
+    "requires_api_key": false
   },
   {
     "skill_id": "ovos-skill-arxiv-papers.andlo",
@@ -93,7 +99,9 @@
     "license": "GPL-3.0-or-later",
     "author": "andlo",
     "in_ovos_store": false,
-    "pipeline": "ovos-common-reading-pipeline-plugin"
+    "pipeline": "ovos-common-reading-pipeline-plugin",
+    "connectivity": "online",
+    "requires_api_key": false
   },
   {
     "skill_id": "ovos-skill-bechstein-tales.andlo",
@@ -118,7 +126,9 @@
     "license": "GPL-3.0-or-later",
     "author": "andlo",
     "in_ovos_store": false,
-    "pipeline": "ovos-common-reading-pipeline-plugin"
+    "pipeline": "ovos-common-reading-pipeline-plugin",
+    "connectivity": "online",
+    "requires_api_key": false
   },
   {
     "skill_id": "ovos-skill-calculator.andlo",
@@ -141,7 +151,9 @@
     "license": "GPL-3.0-or-later",
     "author": "andlo",
     "in_ovos_store": false,
-    "pipeline": null
+    "pipeline": null,
+    "connectivity": "offline",
+    "requires_api_key": false
   },
   {
     "skill_id": "ovos-common-reading-pipeline-plugin.andlo",
@@ -171,7 +183,9 @@
     "license": "GPL-3.0-or-later",
     "author": "andlo",
     "in_ovos_store": false,
-    "pipeline": null
+    "pipeline": null,
+    "connectivity": null,
+    "requires_api_key": false
   },
   {
     "skill_id": "ovos-skill-cosquin-tales.andlo",
@@ -196,7 +210,9 @@
     "license": "GPL-3.0-or-later",
     "author": "andlo",
     "in_ovos_store": false,
-    "pipeline": "ovos-common-reading-pipeline-plugin"
+    "pipeline": "ovos-common-reading-pipeline-plugin",
+    "connectivity": "online",
+    "requires_api_key": false
   },
   {
     "skill_id": "ovos-skill-fairytales.andlo",
@@ -221,7 +237,9 @@
     "license": "GPL-3.0-or-later",
     "author": "andlo",
     "in_ovos_store": false,
-    "pipeline": null
+    "pipeline": null,
+    "connectivity": "online",
+    "requires_api_key": false
   },
   {
     "skill_id": "ovos-skill-geography.andlo",
@@ -249,7 +267,9 @@
     "license": "GPL-3.0-or-later",
     "author": "andlo",
     "in_ovos_store": false,
-    "pipeline": null
+    "pipeline": null,
+    "connectivity": "offline",
+    "requires_api_key": false
   },
   {
     "skill_id": "ovos-skill-geography-practice.andlo",
@@ -276,7 +296,9 @@
     "license": "GPL-3.0-or-later",
     "author": "andlo",
     "in_ovos_store": false,
-    "pipeline": null
+    "pipeline": null,
+    "connectivity": "offline",
+    "requires_api_key": false
   },
   {
     "skill_id": "ovos-skill-geometry.andlo",
@@ -302,7 +324,9 @@
     "license": "GPL-3.0-or-later",
     "author": "andlo",
     "in_ovos_store": false,
-    "pipeline": null
+    "pipeline": null,
+    "connectivity": "offline",
+    "requires_api_key": false
   },
   {
     "skill_id": "ovos-skill-geometry-practice.andlo",
@@ -328,7 +352,9 @@
     "license": "GPL-3.0-or-later",
     "author": "andlo",
     "in_ovos_store": false,
-    "pipeline": null
+    "pipeline": null,
+    "connectivity": "offline",
+    "requires_api_key": false
   },
   {
     "skill_id": "ovos-skill-grimm-tales.andlo",
@@ -353,7 +379,9 @@
     "license": "GPL-3.0-or-later",
     "author": "andlo",
     "in_ovos_store": false,
-    "pipeline": "ovos-common-reading-pipeline-plugin"
+    "pipeline": "ovos-common-reading-pipeline-plugin",
+    "connectivity": "online",
+    "requires_api_key": false
   },
   {
     "skill_id": "ovos-skill-holidays.andlo",
@@ -378,7 +406,9 @@
     "license": "GPL-3.0-or-later",
     "author": "andlo",
     "in_ovos_store": false,
-    "pipeline": null
+    "pipeline": null,
+    "connectivity": "offline",
+    "requires_api_key": false
   },
   {
     "skill_id": "ovos-skill-horoscope-readings.andlo",
@@ -402,12 +432,14 @@
     "license": "GPL-3.0-or-later",
     "author": "andlo",
     "in_ovos_store": false,
-    "pipeline": "ovos-common-reading-pipeline-plugin"
+    "pipeline": "ovos-common-reading-pipeline-plugin",
+    "connectivity": "online",
+    "requires_api_key": false
   },
   {
     "skill_id": "ovos-skill-intercom.andlo",
     "name": "Intercom",
-    "description": "LAN intercom - send a spoken message to a named OVOS device on the same network. Speak-only, never executes commands on the receiving device.",
+    "description": "LAN intercom - send a spoken message to a named OVOS device on the same local network. Fully offline, no internet needed. Speak-only, never executes commands on the receiving device.",
     "examples": [
       "set intercom name to living room",
       "set intercom code to four seven two nine",
@@ -426,7 +458,9 @@
     "license": "GPL-3.0-or-later",
     "author": "andlo",
     "in_ovos_store": false,
-    "pipeline": null
+    "pipeline": null,
+    "connectivity": "offline",
+    "requires_api_key": false
   },
   {
     "skill_id": "ovos-skill-math-practice.andlo",
@@ -457,7 +491,9 @@
     "license": "GPL-3.0-or-later",
     "author": "andlo",
     "in_ovos_store": false,
-    "pipeline": null
+    "pipeline": null,
+    "connectivity": "offline",
+    "requires_api_key": false
   },
   {
     "skill_id": "ovos-skill-metronome.andlo",
@@ -481,7 +517,9 @@
     "license": "GPL-3.0-or-later",
     "author": "andlo",
     "in_ovos_store": false,
-    "pipeline": null
+    "pipeline": null,
+    "connectivity": "offline",
+    "requires_api_key": false
   },
   {
     "skill_id": "ovos-skill-morse-code.andlo",
@@ -503,7 +541,9 @@
     "license": "GPL-3.0-or-later",
     "author": "andlo",
     "in_ovos_store": false,
-    "pipeline": null
+    "pipeline": null,
+    "connectivity": "offline",
+    "requires_api_key": false
   },
   {
     "skill_id": "ovos-skill-nato-alphabet.andlo",
@@ -526,7 +566,9 @@
     "license": "GPL-3.0-or-later",
     "author": "andlo",
     "in_ovos_store": false,
-    "pipeline": null
+    "pipeline": null,
+    "connectivity": "offline",
+    "requires_api_key": false
   },
   {
     "skill_id": "ovos-skill-network-scanner.andlo",
@@ -551,7 +593,9 @@
     "license": "GPL-3.0-or-later",
     "author": "andlo",
     "in_ovos_store": false,
-    "pipeline": null
+    "pipeline": null,
+    "connectivity": "offline",
+    "requires_api_key": false
   },
   {
     "skill_id": "ovos-skill-ovosblog.andlo",
@@ -575,7 +619,9 @@
     "license": "GPL-3.0-or-later",
     "author": "andlo",
     "in_ovos_store": false,
-    "pipeline": "ovos-common-reading-pipeline-plugin"
+    "pipeline": "ovos-common-reading-pipeline-plugin",
+    "connectivity": "online",
+    "requires_api_key": false
   },
   {
     "skill_id": "ovos-skill-rhythm-box.andlo",
@@ -599,7 +645,9 @@
     "license": "GPL-3.0-or-later",
     "author": "andlo",
     "in_ovos_store": false,
-    "pipeline": null
+    "pipeline": null,
+    "connectivity": "offline",
+    "requires_api_key": false
   },
   {
     "skill_id": "ovos-skill-sound-like.andlo",
@@ -624,7 +672,9 @@
     "license": "GPL-3.0-or-later",
     "author": "andlo",
     "in_ovos_store": false,
-    "pipeline": null
+    "pipeline": null,
+    "connectivity": "hybrid",
+    "requires_api_key": true
   },
   {
     "skill_id": "ovos-skill-tuning-fork.andlo",
@@ -648,7 +698,9 @@
     "license": "GPL-3.0-or-later",
     "author": "andlo",
     "in_ovos_store": false,
-    "pipeline": null
+    "pipeline": null,
+    "connectivity": "offline",
+    "requires_api_key": false
   },
   {
     "skill_id": "ovos-skill-convert.andlo",
@@ -673,7 +725,9 @@
     "license": "GPL-3.0-or-later",
     "author": "andlo",
     "in_ovos_store": false,
-    "pipeline": null
+    "pipeline": null,
+    "connectivity": "offline",
+    "requires_api_key": false
   },
   {
     "skill_id": "ovos-skill-voices-of-tomorrow.andlo",
@@ -696,7 +750,9 @@
     "license": "GPL-3.0-or-later",
     "author": "andlo",
     "in_ovos_store": false,
-    "pipeline": null
+    "pipeline": null,
+    "connectivity": "online",
+    "requires_api_key": false
   },
   {
     "skill_id": "ovos-skill-white-noise.andlo",
@@ -721,7 +777,9 @@
     "license": "GPL-3.0-or-later",
     "author": "andlo",
     "in_ovos_store": false,
-    "pipeline": null
+    "pipeline": null,
+    "connectivity": "offline",
+    "requires_api_key": false
   },
   {
     "skill_id": "ovos-skill-wiki-offline.andlo",
@@ -745,6 +803,8 @@
     "license": "GPL-3.0-or-later",
     "author": "andlo",
     "in_ovos_store": false,
-    "pipeline": null
+    "pipeline": null,
+    "connectivity": "offline",
+    "requires_api_key": false
   }
 ]
