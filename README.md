@@ -17,7 +17,7 @@ here.
 
 ---
 
-## Fully built & published to PyPI (11)
+## Fully built & published to PyPI (16)
 
 | Skill | PyPI | Category | What it does |
 |---|---|---|---|
@@ -32,6 +32,11 @@ here.
 | [ovos-skill-calculator](https://github.com/andlo/ovos-skill-calculator) | [v0.0.1](https://pypi.org/project/ovos-skill-calculator/) | Utility | Basic calculator - all operations, fully offline |
 | [ovos-skill-math-practice](https://github.com/andlo/ovos-skill-math-practice) | [v0.0.3](https://pypi.org/project/ovos-skill-math-practice/) | Education | Counting, times tables, teach-then-quiz across all 4 operations |
 | [ovos-skill-network-scanner](https://github.com/andlo/ovos-skill-network-scanner) | [v0.0.1](https://pypi.org/project/ovos-skill-network-scanner/) | Utility | mDNS + ping/ARP/MAC-vendor local network discovery |
+| [ovos-skill-geometry](https://github.com/andlo/ovos-skill-geometry) | [v0.0.3](https://pypi.org/project/ovos-skill-geometry/) | Education | Geometry glossary (24 terms/shapes) + formulas, recited and applied numerically |
+| [ovos-skill-geography](https://github.com/andlo/ovos-skill-geography) | [v0.0.3](https://pypi.org/project/ovos-skill-geography/) | Education | Capital, continent, land borders, area, currency, language for all 194 UN member states |
+| [ovos-skill-geometry-practice](https://github.com/andlo/ovos-skill-geometry-practice) | [v0.0.1](https://pypi.org/project/ovos-skill-geometry-practice/) | Education | Quiz + teach-then-practice on top of ovos-skill-geometry, with a real numeric tolerance band |
+| [ovos-skill-geography-practice](https://github.com/andlo/ovos-skill-geography-practice) | [v0.0.3](https://pypi.org/project/ovos-skill-geography-practice/) | Education | Quiz + teach-then-practice on top of ovos-skill-geography (capitals/continents/borders) |
+| [ovos-skill-wiki-offline](https://github.com/andlo/ovos-skill-wiki-offline) | [v0.0.6](https://pypi.org/project/ovos-skill-wiki-offline/) | Utility | Offline general-knowledge fallback covering Wikipedia's ~10,000 Level 4 Vital Articles (en/es/fr native, any other language via on-demand translation) |
 
 **In the official [OVOS Skill Store](https://openvoiceos.github.io/OVOS-skills-store/)?**
 Not yet for any of them - none have gone through the submission PR to
@@ -40,7 +45,7 @@ yet. This column will get more interesting once some are.
 
 ---
 
-## Design docs / ideas, not built yet (11)
+## Design docs / ideas, not built yet (10)
 
 Investigated and documented before writing code - some are realistic
 future builds, a couple concluded genuinely blocked by the current
@@ -52,7 +57,6 @@ just a one-line status here.
 | [ovos-skill-soundboard](https://github.com/andlo/ovos-skill-soundboard) | Skeleton only | Entertainment | Sound-effects board - flagged as possibly better merged into sound-like |
 | [ovos-skill-language-practice](https://github.com/andlo/ovos-skill-language-practice) | Investigated, mostly resolved | Education | Hear a phrase in a target language, repeat it - platform already supports most of what this needs |
 | [ovos-skill-science-practice](https://github.com/andlo/ovos-skill-science-practice) | Data sources found, ready to build | Education | Periodic table, solar system, physical constants |
-| [ovos-skill-geography-practice](https://github.com/andlo/ovos-skill-geography-practice) | Data source found (ODbL), ready to build | Education | Capitals, continents, land borders |
 | [ovos-skill-morse-practice](https://github.com/andlo/ovos-skill-morse-practice) | Architecture designed | Education | Quiz layer on top of ovos-skill-morse-code |
 | [ovos-skill-nato-practice](https://github.com/andlo/ovos-skill-nato-practice) | Architecture designed | Education | Quiz layer on top of ovos-skill-nato-alphabet |
 | [ovos-skill-note-practice](https://github.com/andlo/ovos-skill-note-practice) | Architecture designed | Education | Quiz layer on top of ovos-skill-tuning-fork |
