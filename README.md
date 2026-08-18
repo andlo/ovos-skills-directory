@@ -36,7 +36,7 @@ here.
 | [ovos-skill-geography](https://github.com/andlo/ovos-skill-geography) | [v0.0.3](https://pypi.org/project/ovos-skill-geography/) | Education | Capital, continent, land borders, area, currency, language for all 194 UN member states |
 | [ovos-skill-geometry-practice](https://github.com/andlo/ovos-skill-geometry-practice) | [v0.0.1](https://pypi.org/project/ovos-skill-geometry-practice/) | Education | Quiz + teach-then-practice on top of ovos-skill-geometry, with a real numeric tolerance band |
 | [ovos-skill-geography-practice](https://github.com/andlo/ovos-skill-geography-practice) | [v0.0.3](https://pypi.org/project/ovos-skill-geography-practice/) | Education | Quiz + teach-then-practice on top of ovos-skill-geography (capitals/continents/borders) |
-| [ovos-skill-wiki-offline](https://github.com/andlo/ovos-skill-wiki-offline) | [v0.0.6](https://pypi.org/project/ovos-skill-wiki-offline/) | Utility | Offline general-knowledge fallback covering Wikipedia's ~10,000 Level 4 Vital Articles (en/es/fr native, any other language via on-demand translation) |
+| [ovos-skill-wiki-offline](https://github.com/andlo/ovos-skill-wiki-offline) | [v0.0.7](https://pypi.org/project/ovos-skill-wiki-offline/) | Utility | Offline general-knowledge fallback covering Wikipedia's ~10,000 Level 4 Vital Articles (en/es/fr native, any other language via on-demand translation) |
 
 **In the official [OVOS Skill Store](https://openvoiceos.github.io/OVOS-skills-store/)?**
 Not yet for any of them - none have gone through the submission PR to
