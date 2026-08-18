@@ -18,5 +18,7 @@
   "package_name": "ovos-skill-wiki-offline",
   "pypi_version": "0.0.7",
   "license": "GPL-3.0-or-later",
-  "author": "andlo"
+  "author": "andlo",
+  "in_ovos_store": false,
+  "pipeline": null
 }

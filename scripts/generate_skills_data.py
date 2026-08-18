@@ -26,6 +26,7 @@ Generates this directory's skill data automatically:
 """
 import base64
 import json
+import re
 import subprocess
 import urllib.error
 import urllib.request
@@ -36,6 +37,15 @@ ROOT = Path(__file__).resolve().parent.parent
 SKILLS_DIR = ROOT / "skills"
 DOCS_DIR = ROOT / "docs"
 FEED_PATH = DOCS_DIR / "skills.json"
+OVOS_STORE_FEED_URL = "https://openvoiceos.github.io/OVOS-skills-store/skills.json"
+
+# Matches "provider for ovos-common-reading-pipeline-plugin" and
+# equivalent phrasing skill authors use in their own skill.json
+# description to declare a pipeline-provider relationship - found by
+# inspecting the actual descriptions rather than assumed upfront.
+# Case-insensitive since usage varies ("Provider for X" vs
+# "provider for X").
+PROVIDER_PATTERN = re.compile(r"provider for ([\w.-]+)", re.IGNORECASE)
 
 
 def gh_json(*args):
@@ -92,12 +102,46 @@ def fetch_skill_json(repo):
     return None
 
 
+def fetch_ovos_store_package_names():
+    """Package names currently LIVE in the official OVOS Skill Store
+    (merged, not just submitted - a submission PR sits pending until
+    a maintainer reviews it, so this naturally starts empty for any
+    skill whose PR hasn't been merged yet and fills in over time as
+    they are, with no further code changes needed here)."""
+    try:
+        with urllib.request.urlopen(OVOS_STORE_FEED_URL, timeout=10) as resp:
+            feed = json.load(resp)
+        return {item.get("package_name") for item in feed.get("items", [])}
+    except Exception:
+        # If the store feed is temporarily unreachable, don't fail
+        # the whole run over a "nice to have" badge - just show no
+        # skill as store-listed this run rather than crashing.
+        return set()
+
+
+def extract_pipeline(description):
+    """Pulls the pipeline-plugin package name out of a description
+    like '...provider for ovos-common-reading-pipeline-plugin...',
+    or None for a standalone skill. See PROVIDER_PATTERN for the
+    exact phrasing this was built from, found by inspecting real
+    skill.json descriptions rather than assumed upfront."""
+    if not description:
+        return None
+    match = PROVIDER_PATTERN.search(description)
+    if not match:
+        return None
+    return match.group(1).rstrip(".")
+
+
 def main():
     SKILLS_DIR.mkdir(exist_ok=True)
     DOCS_DIR.mkdir(exist_ok=True)
 
     candidates = find_candidate_repos()
     print(f"Found {len(candidates)} candidate repos with a skill.json")
+
+    store_package_names = fetch_ovos_store_package_names()
+    print(f"OVOS Skill Store currently lists {len(store_package_names)} packages")
 
     entries = []
     for repo in candidates:
@@ -112,10 +156,11 @@ def main():
             print(f"  SKIP {repo}: not published on PyPI (package_name={package_name})")
             continue
 
+        description = skill_json.get("description")
         entry = {
             "skill_id": skill_json.get("skill_id"),
             "name": skill_json.get("name"),
-            "description": skill_json.get("description"),
+            "description": description,
             "examples": skill_json.get("examples", []),
             "tags": skill_json.get("tags", []),
             "icon": skill_json.get("icon"),
@@ -124,6 +169,8 @@ def main():
             "pypi_version": version,
             "license": skill_json.get("license"),
             "author": skill_json.get("author", GITHUB_USER),
+            "in_ovos_store": package_name in store_package_names,
+            "pipeline": extract_pipeline(description),
         }
         entries.append(entry)
 
@@ -131,7 +178,9 @@ def main():
         with open(SKILLS_DIR / out_name, "w") as f:
             json.dump(entry, f, indent=2)
             f.write("\n")
-        print(f"  OK   {repo} -> {out_name} (v{version})")
+        store_note = " [in OVOS Store]" if entry["in_ovos_store"] else ""
+        pipeline_note = f" [pipeline: {entry['pipeline']}]" if entry["pipeline"] else ""
+        print(f"  OK   {repo} -> {out_name} (v{version}){store_note}{pipeline_note}")
 
     entries.sort(key=lambda e: (e["name"] or "").lower())
     with open(FEED_PATH, "w") as f:
