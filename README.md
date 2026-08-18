@@ -23,7 +23,7 @@ better than a new one - waiting on review, not yet built):
 
 ---
 
-## Fully built & published to PyPI (16)
+## Fully built & published to PyPI (17)
 
 | Skill | PyPI | Category | What it does |
 |---|---|---|---|
@@ -43,6 +43,7 @@ better than a new one - waiting on review, not yet built):
 | [ovos-skill-geometry-practice](https://github.com/andlo/ovos-skill-geometry-practice) | [v0.0.1](https://pypi.org/project/ovos-skill-geometry-practice/) | Education | Quiz + teach-then-practice on top of ovos-skill-geometry, with a real numeric tolerance band |
 | [ovos-skill-geography-practice](https://github.com/andlo/ovos-skill-geography-practice) | [v0.0.3](https://pypi.org/project/ovos-skill-geography-practice/) | Education | Quiz + teach-then-practice on top of ovos-skill-geography (capitals/continents/borders) |
 | [ovos-skill-wiki-offline](https://github.com/andlo/ovos-skill-wiki-offline) | [v0.0.7](https://pypi.org/project/ovos-skill-wiki-offline/) | Utility | Offline general-knowledge fallback covering Wikipedia's ~10,000 Level 4 Vital Articles (en/es/fr native, any other language via on-demand translation) |
+| [ovos-skill-holidays](https://github.com/andlo/ovos-skill-holidays) | [v0.0.1](https://pypi.org/project/ovos-skill-holidays/) | Daily | Public holidays (incl. Easter) + calendar-date questions (weekday for a date, days until a named holiday), computed live via the `holidays` Python library |
 
 **In the official [OVOS Skill Store](https://openvoiceos.github.io/OVOS-skills-store/)?**
 Not yet for any of them - none have gone through the submission PR to
@@ -51,7 +52,7 @@ yet. This column will get more interesting once some are.
 
 ---
 
-## Design docs / ideas, not built yet (14)
+## Design docs / ideas, not built yet (13)
 
 Investigated and documented before writing code - some are realistic
 future builds, a couple concluded genuinely blocked by the current
@@ -72,7 +73,6 @@ just a one-line status here.
 | [ovos-skill-sampler](https://github.com/andlo/ovos-skill-sampler) | **Concluded not buildable today** | Entertainment | Live-looping sampler - needs raw mic access no skill API exposes |
 | [ovos-skill-intercom](https://github.com/andlo/ovos-skill-intercom) | Architecture designed, security boundary resolved | Utility | LAN messaging between OVOS devices - deliberately speak-only, never command execution (see README for why raw messagebus access was rejected) |
 | [ovos-skill-nameday](https://github.com/andlo/ovos-skill-nameday) | Idea, sourcing investigation started | Daily | Name-day (navnedag) lookups - multi-locale (DK/SE/FI/PL/CZ/HU/... all have this tradition, not Danish-specific) |
-| [ovos-skill-holidays](https://github.com/andlo/ovos-skill-holidays) | **Built, tested (41/41), blocked on PyPI setup** | Daily | Public holidays (incl. Easter) + calendar-date math, computed via the `holidays` Python library. 5 locales. Not yet pip-installable - new PyPI project needs a one-time trusted-publisher registration before CI's automated release can succeed. |
 | [ovos-skill-recipe-helper](https://github.com/andlo/ovos-skill-recipe-helper) | Idea, data source identified | Daily | Offline recipes sourced from Wikibooks Cookbook (CC-BY-SA-4.0), unit conversion via ovos-skill-convert |
 
 ---
