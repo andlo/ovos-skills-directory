@@ -15,6 +15,12 @@ translations to (weather, Wolfram Alpha, Pokepedia, and many more) -
 those are contributions to other people's skills, not mine to list
 here.
 
+**Open enhancement proposals** (features that fit an existing skill
+better than a new one - waiting on review, not yet built):
+- [ovos-skill-calculator#1](https://github.com/andlo/ovos-skill-calculator/issues/1) - everyday calculations (BMI, age, tip/bill-splitting)
+- [OpenVoiceOS/ovos-skill-alerts#159](https://github.com/OpenVoiceOS/ovos-skill-alerts/issues/159) - stopwatch
+- [OpenVoiceOS/ovos-skill-date-time#274](https://github.com/OpenVoiceOS/ovos-skill-date-time/issues/274) - general date arithmetic
+
 ---
 
 ## Fully built & published to PyPI (16)
@@ -45,7 +51,7 @@ yet. This column will get more interesting once some are.
 
 ---
 
-## Design docs / ideas, not built yet (10)
+## Design docs / ideas, not built yet (14)
 
 Investigated and documented before writing code - some are realistic
 future builds, a couple concluded genuinely blocked by the current
@@ -62,8 +68,12 @@ just a one-line status here.
 | [ovos-skill-note-practice](https://github.com/andlo/ovos-skill-note-practice) | Architecture designed | Education | Quiz layer on top of ovos-skill-tuning-fork |
 | [ovos-skill-unit-practice](https://github.com/andlo/ovos-skill-unit-practice) | Architecture designed | Education | Quiz layer on top of ovos-skill-convert |
 | [ovos-skill-spelling-practice](https://github.com/andlo/ovos-skill-spelling-practice) | Open question flagged (STT + bare letters) | Education | Quiz layer on top of the existing ovos-skill-spelling |
-| [ovos-skill-trivia-quiz](https://github.com/andlo/ovos-skill-trivia-quiz) | Architecture designed | Entertainment | General-knowledge trivia game, hybrid offline/online |
+| [ovos-skill-trivia-quiz](https://github.com/andlo/ovos-skill-trivia-quiz) | Architecture designed | Entertainment | General-knowledge trivia game - could now be built fully offline using ovos-skill-wiki-offline's dataset instead of the originally-planned hybrid online/offline approach |
 | [ovos-skill-sampler](https://github.com/andlo/ovos-skill-sampler) | **Concluded not buildable today** | Entertainment | Live-looping sampler - needs raw mic access no skill API exposes |
+| [ovos-skill-intercom](https://github.com/andlo/ovos-skill-intercom) | Architecture designed, security boundary resolved | Utility | LAN messaging between OVOS devices - deliberately speak-only, never command execution (see README for why raw messagebus access was rejected) |
+| [ovos-skill-nameday](https://github.com/andlo/ovos-skill-nameday) | Idea, sourcing investigation started | Daily | Name-day (navnedag) lookups - multi-locale (DK/SE/FI/PL/CZ/HU/... all have this tradition, not Danish-specific) |
+| [ovos-skill-holidays](https://github.com/andlo/ovos-skill-holidays) | Idea, library identified | Daily | Public holidays (incl. Easter) + general date arithmetic, computed via the `holidays` Python library - no bundled data needed |
+| [ovos-skill-recipe-helper](https://github.com/andlo/ovos-skill-recipe-helper) | Idea, data source identified | Daily | Offline recipes sourced from Wikibooks Cookbook (CC-BY-SA-4.0), unit conversion via ovos-skill-convert |
 
 ---
 
