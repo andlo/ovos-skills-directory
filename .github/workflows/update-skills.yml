@@ -27,7 +27,14 @@ jobs:
 
       - name: Generate skills data
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # A minimal, fine-grained PAT scoped to "Public Repositories
+          # (read-only)" - deliberately NOT the default GITHUB_TOKEN's
+          # broader personal-account equivalent, and deliberately NOT
+          # reusing a full-scope personal token either. This step only
+          # ever needs to read public code (GitHub code search) and
+          # public skill.json files - it has no reason to hold write
+          # access anywhere, so it doesn't.
+          GH_TOKEN: ${{ secrets.PUBLIC_READ_TOKEN }}
         run: python3 scripts/generate_skills_data.py
 
       - name: Commit changes if any
