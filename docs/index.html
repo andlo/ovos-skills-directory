@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Andlo's OVOS Skills</title>
+  <meta name="description" content="A curated store of Open Voice OS skills built by andlo.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Andlo's OVOS Skills</h1>
+    <p class="subtitle">
+      Fully built, published, and installable Open Voice OS skills.
+      Generated automatically from each skill's own <code>skill.json</code>
+      and live PyPI version - see
+      <a href="https://github.com/andlo/ovos-skills-directory">the repo</a>
+      for design docs and works in progress.
+    </p>
+    <input id="search" type="search" placeholder="Search skills, tags, examples..." autocomplete="off">
+  </header>
+
+  <main id="grid" aria-live="polite"></main>
+
+  <p id="empty-state" hidden>No skills match your search.</p>
+
+  <footer>
+    <p>
+      <a href="skills.json">Raw JSON feed</a> ·
+      Last generated automatically via GitHub Actions.
+    </p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

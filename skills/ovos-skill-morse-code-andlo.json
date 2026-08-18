@@ -1,0 +1,20 @@
+{
+  "skill_id": "ovos-skill-morse-code.andlo",
+  "name": "Morse Code",
+  "description": "Encodes text to Morse code, played as generated audible beeps. Fully offline, nothing recorded.",
+  "examples": [
+    "how do you say SOS in morse code",
+    "play hello world in morse"
+  ],
+  "tags": [
+    "morse code",
+    "novelty",
+    "ham radio"
+  ],
+  "icon": "https://raw.githubusercontent.com/andlo/ovos-skill-morse-code/main/icon.png",
+  "source": "https://github.com/andlo/ovos-skill-morse-code",
+  "package_name": "ovos-skill-morse-code",
+  "pypi_version": "0.0.1",
+  "license": "GPL-3.0-or-later",
+  "author": "andlo"
+}

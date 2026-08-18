@@ -1,0 +1,23 @@
+{
+  "skill_id": "ovos-skill-andersen-tales.andlo",
+  "name": "Andersen Tales (provider)",
+  "description": "Hans Christian Andersen fairy tales provider for ovos-common-reading-pipeline-plugin. No standalone voice interface.",
+  "examples": [
+    "Tell me a story from andersen",
+    "Tell me the story about the little mermaid",
+    "Can you tell me a fairytale from hans christian andersen"
+  ],
+  "tags": [
+    "entertainment",
+    "stories",
+    "fairytales",
+    "andersen",
+    "provider"
+  ],
+  "icon": "https://raw.githubusercontent.com/andlo/ovos-skill-andersen-tales/main/story-512.png",
+  "source": "https://github.com/andlo/ovos-skill-andersen-tales",
+  "package_name": "ovos-skill-andersen-tales",
+  "pypi_version": "0.1.4",
+  "license": "GPL-3.0-or-later",
+  "author": "andlo"
+}

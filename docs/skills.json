@@ -1,0 +1,690 @@
+[
+  {
+    "skill_id": "ovos-skill-365tomorrows-stories.andlo",
+    "name": "365tomorrows Stories (provider)",
+    "description": "Reads daily CC-licensed flash sci-fi from 365tomorrows.com aloud. Provider for ovos-common-reading-pipeline-plugin - no standalone voice interface.",
+    "examples": [
+      "Read newest story from 365tomorrows",
+      "Read a story from 365tomorrows"
+    ],
+    "tags": [
+      "entertainment",
+      "scifi",
+      "flashfiction",
+      "provider"
+    ],
+    "icon": "https://raw.githubusercontent.com/andlo/ovos-skill-365tomorrows-stories/main/book-512.png",
+    "source": "https://github.com/andlo/ovos-skill-365tomorrows-stories",
+    "package_name": "ovos-skill-365tomorrows-stories",
+    "pypi_version": "0.1.3",
+    "license": "GPL-3.0-or-later",
+    "author": "andlo"
+  },
+  {
+    "skill_id": "ovos-skill-andersen-tales.andlo",
+    "name": "Andersen Tales (provider)",
+    "description": "Hans Christian Andersen fairy tales provider for ovos-common-reading-pipeline-plugin. No standalone voice interface.",
+    "examples": [
+      "Tell me a story from andersen",
+      "Tell me the story about the little mermaid",
+      "Can you tell me a fairytale from hans christian andersen"
+    ],
+    "tags": [
+      "entertainment",
+      "stories",
+      "fairytales",
+      "andersen",
+      "provider"
+    ],
+    "icon": "https://raw.githubusercontent.com/andlo/ovos-skill-andersen-tales/main/story-512.png",
+    "source": "https://github.com/andlo/ovos-skill-andersen-tales",
+    "package_name": "ovos-skill-andersen-tales",
+    "pypi_version": "0.1.4",
+    "license": "GPL-3.0-or-later",
+    "author": "andlo"
+  },
+  {
+    "skill_id": "ovos-skill-andrew-lang-tales.andlo",
+    "name": "Andrew Lang Tales (provider)",
+    "description": "Andrew Lang's Fairy Books provider for ovos-common-reading-pipeline-plugin. No standalone voice interface.",
+    "examples": [
+      "Tell me a story from andrew lang",
+      "Tell me a fairy tale from the fairy books"
+    ],
+    "tags": [
+      "entertainment",
+      "stories",
+      "fairytales",
+      "gutenberg",
+      "provider"
+    ],
+    "icon": "https://raw.githubusercontent.com/andlo/ovos-skill-andrew-lang-tales/main/story-512.png",
+    "source": "https://github.com/andlo/ovos-skill-andrew-lang-tales",
+    "package_name": "ovos-skill-andrew-lang-tales",
+    "pypi_version": "0.1.4",
+    "license": "GPL-3.0-or-later",
+    "author": "andlo"
+  },
+  {
+    "skill_id": "ovos-skill-arxiv-papers.andlo",
+    "name": "arXiv Papers (provider)",
+    "description": "Reads arXiv paper abstracts aloud. Provider for ovos-common-reading-pipeline-plugin - no standalone voice interface.",
+    "examples": [
+      "Read latest paper from arxiv",
+      "Read an article from arxiv"
+    ],
+    "tags": [
+      "science",
+      "research",
+      "arxiv",
+      "papers",
+      "provider"
+    ],
+    "icon": "https://raw.githubusercontent.com/andlo/ovos-skill-arxiv-papers/main/book-512.png",
+    "source": "https://github.com/andlo/ovos-skill-arxiv-papers",
+    "package_name": "ovos-skill-arxiv-papers",
+    "pypi_version": "0.1.3",
+    "license": "GPL-3.0-or-later",
+    "author": "andlo"
+  },
+  {
+    "skill_id": "ovos-skill-bechstein-tales.andlo",
+    "name": "Bechstein Tales (provider)",
+    "description": "Ludwig Bechstein's German fairy tales provider for ovos-common-reading-pipeline-plugin. German only, no translation.",
+    "examples": [
+      "Tell me a story from bechstein",
+      "Tell me a fairy tale from ludwig bechstein"
+    ],
+    "tags": [
+      "entertainment",
+      "stories",
+      "fairytales",
+      "bechstein",
+      "german",
+      "provider"
+    ],
+    "icon": "https://raw.githubusercontent.com/andlo/ovos-skill-bechstein-tales/main/story-512.png",
+    "source": "https://github.com/andlo/ovos-skill-bechstein-tales",
+    "package_name": "ovos-skill-bechstein-tales",
+    "pypi_version": "0.1.2",
+    "license": "GPL-3.0-or-later",
+    "author": "andlo"
+  },
+  {
+    "skill_id": "ovos-skill-calculator.andlo",
+    "name": "Calculator",
+    "description": "A basic calculator - add, subtract, multiply, divide, percentages, squares, square roots. Fully offline.",
+    "examples": [
+      "what is 15 times 23",
+      "what is the square root of 144",
+      "what is 20 percent of 150"
+    ],
+    "tags": [
+      "calculator",
+      "math",
+      "arithmetic"
+    ],
+    "icon": "https://raw.githubusercontent.com/andlo/ovos-skill-calculator/main/icon.png",
+    "source": "https://github.com/andlo/ovos-skill-calculator",
+    "package_name": "ovos-skill-calculator",
+    "pypi_version": "0.0.2",
+    "license": "GPL-3.0-or-later",
+    "author": "andlo"
+  },
+  {
+    "skill_id": "ovos-common-reading-pipeline-plugin.andlo",
+    "name": "Common Reading Pipeline",
+    "description": "A generic reading pipeline: recognizes requests to read stories, articles, reports, horoscopes and more aloud, and routes them to whichever installed provider skill can supply that content. Not tied to any single content type or source.",
+    "examples": [
+      "Tell me a story about cinderella",
+      "Read me an article about penguins",
+      "Tell me a story from grimm",
+      "Read a andersen story",
+      "Read me a horoscope about leo",
+      "Continue reading",
+      "Pause"
+    ],
+    "tags": [
+      "entertainment",
+      "stories",
+      "articles",
+      "horoscope",
+      "reading",
+      "pipeline"
+    ],
+    "icon": "https://raw.githubusercontent.com/andlo/ovos-common-reading-pipeline-plugin/main/book-512.png",
+    "source": "https://github.com/andlo/ovos-common-reading-pipeline-plugin",
+    "package_name": "ovos-common-reading-pipeline-plugin",
+    "pypi_version": "0.1.11",
+    "license": "GPL-3.0-or-later",
+    "author": "andlo"
+  },
+  {
+    "skill_id": "ovos-skill-cosquin-tales.andlo",
+    "name": "Cosquin Tales (provider)",
+    "description": "Emmanuel Cosquin's Lorraine folk tales provider for ovos-common-reading-pipeline-plugin. French only, no translation.",
+    "examples": [
+      "Tell me a story from cosquin",
+      "Tell me a fairy tale from lorraine"
+    ],
+    "tags": [
+      "entertainment",
+      "stories",
+      "folklore",
+      "cosquin",
+      "french",
+      "provider"
+    ],
+    "icon": "https://raw.githubusercontent.com/andlo/ovos-skill-cosquin-tales/main/story-512.png",
+    "source": "https://github.com/andlo/ovos-skill-cosquin-tales",
+    "package_name": "ovos-skill-cosquin-tales",
+    "pypi_version": "0.1.2",
+    "license": "GPL-3.0-or-later",
+    "author": "andlo"
+  },
+  {
+    "skill_id": "ovos-skill-fairytales.andlo",
+    "name": "Fairy Tales",
+    "description": "Tells fairy tales by Hans Christian Andersen and the Brothers Grimm.",
+    "examples": [
+      "tell me a story about Cinderella",
+      "read me a fairy tale",
+      "continue the story"
+    ],
+    "tags": [
+      "entertainment",
+      "stories",
+      "fairytales",
+      "andersen",
+      "grimm"
+    ],
+    "icon": "https://raw.githubusercontent.com/andlo/ovos-skill-fairytales/master/story-512.png",
+    "source": "https://github.com/andlo/ovos-skill-fairytales",
+    "package_name": "ovos-skill-fairytales",
+    "pypi_version": "0.1.0",
+    "license": "GPL-3.0-or-later",
+    "author": "andlo"
+  },
+  {
+    "skill_id": "ovos-skill-geography.andlo",
+    "name": "Geography",
+    "description": "Geography facts - capitals, continents, borders, area, currency, and language for 194 UN member states. Fully offline.",
+    "examples": [
+      "what is the capital of France",
+      "what continent is Kenya in",
+      "what countries border Germany",
+      "how big is Brazil",
+      "what currency does Japan use",
+      "what language do they speak in Egypt",
+      "tell me about Afghanistan"
+    ],
+    "tags": [
+      "geography",
+      "reference",
+      "capitals",
+      "countries"
+    ],
+    "icon": "https://raw.githubusercontent.com/andlo/ovos-skill-geography/main/icon.png",
+    "source": "https://github.com/andlo/ovos-skill-geography",
+    "package_name": "ovos-skill-geography",
+    "pypi_version": "0.0.3",
+    "license": "GPL-3.0-or-later",
+    "author": "andlo"
+  },
+  {
+    "skill_id": "ovos-skill-geography-practice.andlo",
+    "name": "Geography Practice",
+    "description": "Geography practice - quizzes and teach-then-practice for capitals, continents, and country borders across 194 UN member states. Fully offline.",
+    "examples": [
+      "quiz me on capitals",
+      "quiz me on continents",
+      "quiz me on country borders",
+      "teach me about Europe",
+      "quiz me on what you taught me"
+    ],
+    "tags": [
+      "geography",
+      "education",
+      "capitals",
+      "quiz",
+      "kids"
+    ],
+    "icon": "https://raw.githubusercontent.com/andlo/ovos-skill-geography-practice/main/icon.png",
+    "source": "https://github.com/andlo/ovos-skill-geography-practice",
+    "package_name": "ovos-skill-geography-practice",
+    "pypi_version": "0.0.3",
+    "license": "GPL-3.0-or-later",
+    "author": "andlo"
+  },
+  {
+    "skill_id": "ovos-skill-geometry.andlo",
+    "name": "Geometry",
+    "description": "Geometry knowledge - shape and term definitions, formulas, and applied calculations for rectangles, squares, triangles, circles, and the Pythagorean theorem. Fully offline.",
+    "examples": [
+      "what is a rhombus",
+      "what is the formula for the area of a circle",
+      "what is the area of a rectangle with length 5 and width 3",
+      "what is the hypotenuse of a right triangle with legs 3 and 4",
+      "what is pythagoras' theorem"
+    ],
+    "tags": [
+      "geometry",
+      "reference",
+      "math",
+      "shapes"
+    ],
+    "icon": "https://raw.githubusercontent.com/andlo/ovos-skill-geometry/main/icon.png",
+    "source": "https://github.com/andlo/ovos-skill-geometry",
+    "package_name": "ovos-skill-geometry",
+    "pypi_version": "0.0.3",
+    "license": "GPL-3.0-or-later",
+    "author": "andlo"
+  },
+  {
+    "skill_id": "ovos-skill-geometry-practice.andlo",
+    "name": "Geometry Practice",
+    "description": "Geometry practice - quizzes and teach-then-practice for glossary terms, formulas, and Pythagoras' theorem. Fully offline.",
+    "examples": [
+      "quiz me on geometry terms",
+      "quiz me on area and perimeter",
+      "quiz me on pythagoras",
+      "teach me about terms",
+      "quiz me on what you taught me"
+    ],
+    "tags": [
+      "geometry",
+      "education",
+      "math",
+      "quiz"
+    ],
+    "icon": "https://raw.githubusercontent.com/andlo/ovos-skill-geometry-practice/main/icon.png",
+    "source": "https://github.com/andlo/ovos-skill-geometry-practice",
+    "package_name": "ovos-skill-geometry-practice",
+    "pypi_version": "0.0.1",
+    "license": "GPL-3.0-or-later",
+    "author": "andlo"
+  },
+  {
+    "skill_id": "ovos-skill-grimm-tales.andlo",
+    "name": "Grimm Tales (provider)",
+    "description": "Brothers Grimm fairy tales provider for ovos-common-reading-pipeline-plugin. No standalone voice interface.",
+    "examples": [
+      "Tell me a story from grimm",
+      "Tell me the story about cinderella",
+      "Can you tell me a fairy tale from the brothers grimm"
+    ],
+    "tags": [
+      "entertainment",
+      "stories",
+      "fairytales",
+      "grimm",
+      "provider"
+    ],
+    "icon": "https://raw.githubusercontent.com/andlo/ovos-skill-grimm-tales/main/story-512.png",
+    "source": "https://github.com/andlo/ovos-skill-grimm-tales",
+    "package_name": "ovos-skill-grimm-tales",
+    "pypi_version": "0.1.4",
+    "license": "GPL-3.0-or-later",
+    "author": "andlo"
+  },
+  {
+    "skill_id": "ovos-skill-holidays.andlo",
+    "name": "Holidays",
+    "description": "Public holidays, Easter, and calendar-date math. Fully offline, computed live via the holidays library.",
+    "examples": [
+      "is today a holiday",
+      "when is christmas",
+      "how many days until easter",
+      "what day of the week is march 3rd"
+    ],
+    "tags": [
+      "holidays",
+      "calendar",
+      "date",
+      "easter"
+    ],
+    "icon": "https://raw.githubusercontent.com/andlo/ovos-skill-holidays/main/icon.png",
+    "source": "https://github.com/andlo/ovos-skill-holidays",
+    "package_name": "ovos-skill-holidays",
+    "pypi_version": "0.0.2",
+    "license": "GPL-3.0-or-later",
+    "author": "andlo"
+  },
+  {
+    "skill_id": "ovos-skill-horoscope-readings.andlo",
+    "name": "Horoscope Readings (provider)",
+    "description": "Reads daily zodiac horoscopes aloud. Provider for ovos-common-reading-pipeline-plugin - no standalone voice interface.",
+    "examples": [
+      "Tell me a horoscope about leo",
+      "Read me a horoscope about taurus"
+    ],
+    "tags": [
+      "entertainment",
+      "horoscope",
+      "astrology",
+      "zodiac",
+      "provider"
+    ],
+    "icon": "https://raw.githubusercontent.com/andlo/ovos-skill-horoscope-readings/main/book-512.png",
+    "source": "https://github.com/andlo/ovos-skill-horoscope-readings",
+    "package_name": "ovos-skill-horoscope-readings",
+    "pypi_version": "0.1.1",
+    "license": "GPL-3.0-or-later",
+    "author": "andlo"
+  },
+  {
+    "skill_id": "ovos-skill-intercom.andlo",
+    "name": "Intercom",
+    "description": "LAN intercom - send a spoken message to a named OVOS device on the same network. Speak-only, never executes commands on the receiving device.",
+    "examples": [
+      "set intercom name to living room",
+      "set intercom code to four seven two nine",
+      "send a message to the bedroom"
+    ],
+    "tags": [
+      "intercom",
+      "multi-device",
+      "messaging",
+      "lan"
+    ],
+    "icon": "https://raw.githubusercontent.com/andlo/ovos-skill-intercom/main/icon.png",
+    "source": "https://github.com/andlo/ovos-skill-intercom",
+    "package_name": "ovos-skill-intercom",
+    "pypi_version": "0.0.4",
+    "license": "GPL-3.0-or-later",
+    "author": "andlo"
+  },
+  {
+    "skill_id": "ovos-skill-math-practice.andlo",
+    "name": "Math Practice",
+    "description": "Math practice for kids - counting, times table recitation, and interactive quizzes across addition, subtraction, multiplication, division, and percentages. Fully offline.",
+    "examples": [
+      "count to ten",
+      "say the 5 times table",
+      "quiz me on the 3 times table",
+      "quiz me on percentages",
+      "quiz me on hard addition",
+      "quiz me on mixed operators",
+      "quiz me on estimation",
+      "quiz me on decimal addition",
+      "give me a full math quiz"
+    ],
+    "tags": [
+      "math",
+      "education",
+      "times tables",
+      "quiz",
+      "kids"
+    ],
+    "icon": "https://raw.githubusercontent.com/andlo/ovos-skill-math-practice/main/icon.png",
+    "source": "https://github.com/andlo/ovos-skill-math-practice",
+    "package_name": "ovos-skill-math-practice",
+    "pypi_version": "0.0.4",
+    "license": "GPL-3.0-or-later",
+    "author": "andlo"
+  },
+  {
+    "skill_id": "ovos-skill-metronome.andlo",
+    "name": "Metronome",
+    "description": "A metronome - set a tempo in BPM and get an audible click track with an accented downbeat. Fully deterministic and offline: generated click tones, not recordings.",
+    "examples": [
+      "set a metronome to 120 bpm",
+      "start a metronome",
+      "stop the metronome"
+    ],
+    "tags": [
+      "music",
+      "metronome",
+      "tempo",
+      "practice"
+    ],
+    "icon": "https://raw.githubusercontent.com/andlo/ovos-skill-metronome/main/icon.png",
+    "source": "https://github.com/andlo/ovos-skill-metronome",
+    "package_name": "ovos-skill-metronome",
+    "pypi_version": "0.0.1",
+    "license": "GPL-3.0-or-later",
+    "author": "andlo"
+  },
+  {
+    "skill_id": "ovos-skill-morse-code.andlo",
+    "name": "Morse Code",
+    "description": "Encodes text to Morse code, played as generated audible beeps. Fully offline, nothing recorded.",
+    "examples": [
+      "how do you say SOS in morse code",
+      "play hello world in morse"
+    ],
+    "tags": [
+      "morse code",
+      "novelty",
+      "ham radio"
+    ],
+    "icon": "https://raw.githubusercontent.com/andlo/ovos-skill-morse-code/main/icon.png",
+    "source": "https://github.com/andlo/ovos-skill-morse-code",
+    "package_name": "ovos-skill-morse-code",
+    "pypi_version": "0.0.1",
+    "license": "GPL-3.0-or-later",
+    "author": "andlo"
+  },
+  {
+    "skill_id": "ovos-skill-nato-alphabet.andlo",
+    "name": "NATO Alphabet",
+    "description": "Spells a word using the NATO/ICAO phonetic alphabet - Alfa, Bravo, Charlie. Fully offline, pure lookup table.",
+    "examples": [
+      "spell Andreas",
+      "how do you spell hello"
+    ],
+    "tags": [
+      "spelling",
+      "nato",
+      "phonetic alphabet",
+      "utility"
+    ],
+    "icon": "https://raw.githubusercontent.com/andlo/ovos-skill-nato-alphabet/main/icon.png",
+    "source": "https://github.com/andlo/ovos-skill-nato-alphabet",
+    "package_name": "ovos-skill-nato-alphabet",
+    "pypi_version": "0.0.1",
+    "license": "GPL-3.0-or-later",
+    "author": "andlo"
+  },
+  {
+    "skill_id": "ovos-skill-network-scanner.andlo",
+    "name": "Network Scanner",
+    "description": "Discovers devices on your own local network via mDNS/Bonjour plus a ping+ARP+MAC-vendor sweep. Fully offline, no root required.",
+    "examples": [
+      "scan the network",
+      "can you see my Sony TV",
+      "is my printer on the network"
+    ],
+    "tags": [
+      "network",
+      "scanner",
+      "mdns",
+      "discovery",
+      "lan"
+    ],
+    "icon": "https://raw.githubusercontent.com/andlo/ovos-skill-network-scanner/main/icon.png",
+    "source": "https://github.com/andlo/ovos-skill-network-scanner",
+    "package_name": "ovos-skill-network-scanner",
+    "pypi_version": "0.0.1",
+    "license": "GPL-3.0-or-later",
+    "author": "andlo"
+  },
+  {
+    "skill_id": "ovos-skill-ovosblog.andlo",
+    "name": "OVOS Blog (provider)",
+    "description": "Reads the OpenVoiceOS blog aloud. Provider for ovos-common-reading-pipeline-plugin - no standalone voice interface.",
+    "examples": [
+      "Read latest post from ovosblog",
+      "Read newest post from the openvoiceos blog"
+    ],
+    "tags": [
+      "news",
+      "blog",
+      "openvoiceos",
+      "rss",
+      "provider"
+    ],
+    "icon": "https://raw.githubusercontent.com/andlo/ovos-skill-ovosblog/main/world-512.png",
+    "source": "https://github.com/andlo/ovos-skill-ovosblog",
+    "package_name": "ovos-skill-ovosblog",
+    "pypi_version": "0.1.3",
+    "license": "GPL-3.0-or-later",
+    "author": "andlo"
+  },
+  {
+    "skill_id": "ovos-skill-rhythm-box.andlo",
+    "name": "Rhythm Box",
+    "description": "A simple drum-machine skill - loops a beat pattern (rock, four-on-the-floor) at a chosen tempo. Fully offline, generated drum sounds.",
+    "examples": [
+      "play a rock beat at 100 bpm",
+      "start a drum loop",
+      "stop the beat"
+    ],
+    "tags": [
+      "music",
+      "drums",
+      "rhythm",
+      "beat"
+    ],
+    "icon": "https://raw.githubusercontent.com/andlo/ovos-skill-rhythm-box/main/icon.png",
+    "source": "https://github.com/andlo/ovos-skill-rhythm-box",
+    "package_name": "ovos-skill-rhythm-box",
+    "pypi_version": "0.0.1",
+    "license": "GPL-3.0-or-later",
+    "author": "andlo"
+  },
+  {
+    "skill_id": "ovos-skill-sound-like.andlo",
+    "name": "Sound Like",
+    "description": "How does a cow sound? Bundled offline sounds (currently animals) for instant answers, with an optional freesound.org online fallback for anything else, filtered to CC0-licensed results.",
+    "examples": [
+      "how does a cow sound",
+      "what does a dog sound like",
+      "play a cat sound"
+    ],
+    "tags": [
+      "sounds",
+      "animals",
+      "fun",
+      "kids",
+      "entertainment"
+    ],
+    "icon": "https://raw.githubusercontent.com/andlo/ovos-skill-sound-like/main/icon.png",
+    "source": "https://github.com/andlo/ovos-skill-sound-like",
+    "package_name": "ovos-skill-sound-like",
+    "pypi_version": "0.0.1",
+    "license": "GPL-3.0-or-later",
+    "author": "andlo"
+  },
+  {
+    "skill_id": "ovos-skill-tuning-fork.andlo",
+    "name": "Tuning Fork",
+    "description": "A reference-tone generator - give me an A plays 440Hz, play 300 hertz plays any frequency. Fully offline, generated tones, nothing recorded.",
+    "examples": [
+      "give me an A",
+      "play a C sharp",
+      "play 300 hertz"
+    ],
+    "tags": [
+      "music",
+      "tuning",
+      "reference tone",
+      "instrument"
+    ],
+    "icon": "https://raw.githubusercontent.com/andlo/ovos-skill-tuning-fork/main/icon.png",
+    "source": "https://github.com/andlo/ovos-skill-tuning-fork",
+    "package_name": "ovos-skill-tuning-fork",
+    "pypi_version": "0.0.1",
+    "license": "GPL-3.0-or-later",
+    "author": "andlo"
+  },
+  {
+    "skill_id": "ovos-skill-convert.andlo",
+    "name": "Unit Converter",
+    "description": "Local, offline unit conversion - no cloud dependency, no API key. Covers length, mass, temperature, time, speed, area, volume, angle, density, pressure, force, energy, power, torque, acceleration, concentration, computer, and flow.",
+    "examples": [
+      "convert 10 centimeters to inches",
+      "how many feet is 2 meters",
+      "convert 100 celsius to fahrenheit",
+      "how many pounds is 5 kilograms"
+    ],
+    "tags": [
+      "utility",
+      "converter",
+      "units",
+      "measurement"
+    ],
+    "icon": "https://raw.githubusercontent.com/andlo/ovos-skill-convert/main/icon.png",
+    "source": "https://github.com/andlo/ovos-skill-convert",
+    "package_name": "ovos-skill-convert",
+    "pypi_version": "0.0.6",
+    "license": "GPL-3.0-or-later",
+    "author": "andlo"
+  },
+  {
+    "skill_id": "ovos-skill-voices-of-tomorrow.andlo",
+    "name": "Voices of Tomorrow",
+    "description": "Plays pre-recorded audio readings of 365tomorrows.com flash fiction stories, via OCP. Separate from ovos-skill-365tomorrows-stories, which reads the text aloud via TTS instead.",
+    "examples": [
+      "play voices of tomorrow",
+      "play the 365tomorrows podcast"
+    ],
+    "tags": [
+      "entertainment",
+      "scifi",
+      "podcast",
+      "ocp"
+    ],
+    "icon": "https://raw.githubusercontent.com/andlo/ovos-skill-voices-of-tomorrow/main/ui/icon.png",
+    "source": "https://github.com/andlo/ovos-skill-voices-of-tomorrow",
+    "package_name": "ovos-skill-voices-of-tomorrow",
+    "pypi_version": "0.1.1",
+    "license": "GPL-3.0-or-later",
+    "author": "andlo"
+  },
+  {
+    "skill_id": "ovos-skill-white-noise.andlo",
+    "name": "White Noise",
+    "description": "An ambient noise machine - white, pink, and brown noise for sleep or focus. Fully offline, all generated, nothing recorded.",
+    "examples": [
+      "play white noise",
+      "play pink noise",
+      "stop the noise"
+    ],
+    "tags": [
+      "ambient",
+      "sleep",
+      "focus",
+      "white noise",
+      "relaxation"
+    ],
+    "icon": "https://raw.githubusercontent.com/andlo/ovos-skill-white-noise/main/icon.png",
+    "source": "https://github.com/andlo/ovos-skill-white-noise",
+    "package_name": "ovos-skill-white-noise",
+    "pypi_version": "0.0.1",
+    "license": "GPL-3.0-or-later",
+    "author": "andlo"
+  },
+  {
+    "skill_id": "ovos-skill-wiki-offline.andlo",
+    "name": "Wiki Offline",
+    "description": "Offline general-knowledge lookup covering Wikipedia's ~10,000 Level 4 Vital Articles. English, Spanish, and French are native; any other language is answered via on-demand offline translation. No internet connection needed.",
+    "examples": [
+      "what is photosynthesis",
+      "who was Marie Curie",
+      "tell me about the Eiffel Tower"
+    ],
+    "tags": [
+      "wikipedia",
+      "knowledge",
+      "offline",
+      "reference"
+    ],
+    "icon": "https://raw.githubusercontent.com/andlo/ovos-skill-wiki-offline/main/icon.png",
+    "source": "https://github.com/andlo/ovos-skill-wiki-offline",
+    "package_name": "ovos-skill-wiki-offline",
+    "pypi_version": "0.0.7",
+    "license": "GPL-3.0-or-later",
+    "author": "andlo"
+  }
+]

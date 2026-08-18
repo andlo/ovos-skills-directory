@@ -1,14 +1,28 @@
 # Andlo's OVOS Skills Directory
 
+**Live, auto-updated store**: **[andlo.github.io/ovos-skills-directory](https://andlo.github.io/ovos-skills-directory/)**
+- Every skill's own `locale/en-us/skill.json` is the single source of
+  truth - never hand-transcribed here, so it can't drift out of sync.
+- A skill only appears once it's actually **published on PyPI** -
+  having a `skill.json` alone isn't enough (a skeleton like
+  `ovos-skill-soundboard` has one but isn't finished).
+- Regenerated automatically once a day via GitHub Actions
+  (`scripts/generate_skills_data.py`), plus on-demand.
+
+This README stays hand-written for the narrative context (why a
+skill exists, its status, design-doc reasoning) the automated feed
+doesn't capture - the live site above is the up-to-date browsable
+list; this file is more of a running log/rationale.
+
 A curated directory of skills, plugins, and tools **I've personally
 created**, distinct from
 ["Andlo's skill list"](https://github.com/OpenVoiceOS/ovos_skill_manager) -
 that one is a different, older project entirely: an unmaintained,
 auto-generated web scrape of 900+ skills from across all of GitHub,
 recognized by `osm` as an appstore option but not a curated list of my
-own work. This directory is the opposite: small, hand-maintained, and
-specifically about what I've built or designed myself - not a
-discovery tool for the wider ecosystem.
+own work. This directory is the opposite: small, and specifically
+about what I've built or designed myself - not a discovery tool for
+the wider ecosystem.
 
 **Not included**: the many OVOS skills I've contributed Danish
 translations to (weather, Wolfram Alpha, Pokepedia, and many more) -
@@ -113,9 +127,15 @@ one shared bus protocol:
 
 ## Maintenance
 
-This directory is manually curated, not auto-generated - update it by
-hand as new skills land or design docs get built. Given how quickly
-today's batch grew, worth revisiting whether a lightweight generation
-script (reading each repo's own README/skill.json rather than
-retyping descriptions here) is worth building if this keeps growing
-at the same rate.
+The live store (`docs/`) and the per-skill data files (`skills/`) are
+**fully automated** - `scripts/generate_skills_data.py` discovers
+skills by searching GitHub for repos owned by `andlo` containing a
+`skill.json` file (not a name pattern or a hand-kept list, both of
+which go stale), filters to ones actually published on PyPI, and
+regenerates everything from each skill's own metadata. Runs daily via
+GitHub Actions, and on-demand via `workflow_dispatch`.
+
+This README's tables (categorization, status commentary, design-doc
+reasoning) remain hand-written, since that narrative context isn't
+something a `skill.json` file captures - update these by hand as
+new skills land or design docs get built.

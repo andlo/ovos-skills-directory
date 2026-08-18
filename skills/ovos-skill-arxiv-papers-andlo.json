@@ -1,0 +1,22 @@
+{
+  "skill_id": "ovos-skill-arxiv-papers.andlo",
+  "name": "arXiv Papers (provider)",
+  "description": "Reads arXiv paper abstracts aloud. Provider for ovos-common-reading-pipeline-plugin - no standalone voice interface.",
+  "examples": [
+    "Read latest paper from arxiv",
+    "Read an article from arxiv"
+  ],
+  "tags": [
+    "science",
+    "research",
+    "arxiv",
+    "papers",
+    "provider"
+  ],
+  "icon": "https://raw.githubusercontent.com/andlo/ovos-skill-arxiv-papers/main/book-512.png",
+  "source": "https://github.com/andlo/ovos-skill-arxiv-papers",
+  "package_name": "ovos-skill-arxiv-papers",
+  "pypi_version": "0.1.3",
+  "license": "GPL-3.0-or-later",
+  "author": "andlo"
+}

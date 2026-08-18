@@ -1,0 +1,26 @@
+{
+  "skill_id": "ovos-skill-geography.andlo",
+  "name": "Geography",
+  "description": "Geography facts - capitals, continents, borders, area, currency, and language for 194 UN member states. Fully offline.",
+  "examples": [
+    "what is the capital of France",
+    "what continent is Kenya in",
+    "what countries border Germany",
+    "how big is Brazil",
+    "what currency does Japan use",
+    "what language do they speak in Egypt",
+    "tell me about Afghanistan"
+  ],
+  "tags": [
+    "geography",
+    "reference",
+    "capitals",
+    "countries"
+  ],
+  "icon": "https://raw.githubusercontent.com/andlo/ovos-skill-geography/main/icon.png",
+  "source": "https://github.com/andlo/ovos-skill-geography",
+  "package_name": "ovos-skill-geography",
+  "pypi_version": "0.0.3",
+  "license": "GPL-3.0-or-later",
+  "author": "andlo"
+}

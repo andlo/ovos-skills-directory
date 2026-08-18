@@ -1,0 +1,21 @@
+{
+  "skill_id": "ovos-skill-voices-of-tomorrow.andlo",
+  "name": "Voices of Tomorrow",
+  "description": "Plays pre-recorded audio readings of 365tomorrows.com flash fiction stories, via OCP. Separate from ovos-skill-365tomorrows-stories, which reads the text aloud via TTS instead.",
+  "examples": [
+    "play voices of tomorrow",
+    "play the 365tomorrows podcast"
+  ],
+  "tags": [
+    "entertainment",
+    "scifi",
+    "podcast",
+    "ocp"
+  ],
+  "icon": "https://raw.githubusercontent.com/andlo/ovos-skill-voices-of-tomorrow/main/ui/icon.png",
+  "source": "https://github.com/andlo/ovos-skill-voices-of-tomorrow",
+  "package_name": "ovos-skill-voices-of-tomorrow",
+  "pypi_version": "0.1.1",
+  "license": "GPL-3.0-or-later",
+  "author": "andlo"
+}

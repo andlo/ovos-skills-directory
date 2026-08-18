@@ -1,0 +1,22 @@
+{
+  "skill_id": "ovos-skill-horoscope-readings.andlo",
+  "name": "Horoscope Readings (provider)",
+  "description": "Reads daily zodiac horoscopes aloud. Provider for ovos-common-reading-pipeline-plugin - no standalone voice interface.",
+  "examples": [
+    "Tell me a horoscope about leo",
+    "Read me a horoscope about taurus"
+  ],
+  "tags": [
+    "entertainment",
+    "horoscope",
+    "astrology",
+    "zodiac",
+    "provider"
+  ],
+  "icon": "https://raw.githubusercontent.com/andlo/ovos-skill-horoscope-readings/main/book-512.png",
+  "source": "https://github.com/andlo/ovos-skill-horoscope-readings",
+  "package_name": "ovos-skill-horoscope-readings",
+  "pypi_version": "0.1.1",
+  "license": "GPL-3.0-or-later",
+  "author": "andlo"
+}

@@ -1,0 +1,21 @@
+{
+  "skill_id": "ovos-skill-365tomorrows-stories.andlo",
+  "name": "365tomorrows Stories (provider)",
+  "description": "Reads daily CC-licensed flash sci-fi from 365tomorrows.com aloud. Provider for ovos-common-reading-pipeline-plugin - no standalone voice interface.",
+  "examples": [
+    "Read newest story from 365tomorrows",
+    "Read a story from 365tomorrows"
+  ],
+  "tags": [
+    "entertainment",
+    "scifi",
+    "flashfiction",
+    "provider"
+  ],
+  "icon": "https://raw.githubusercontent.com/andlo/ovos-skill-365tomorrows-stories/main/book-512.png",
+  "source": "https://github.com/andlo/ovos-skill-365tomorrows-stories",
+  "package_name": "ovos-skill-365tomorrows-stories",
+  "pypi_version": "0.1.3",
+  "license": "GPL-3.0-or-later",
+  "author": "andlo"
+}
