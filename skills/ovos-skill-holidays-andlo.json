@@ -12,7 +12,8 @@
     "holidays",
     "calendar",
     "date",
-    "easter"
+    "easter",
+    "daily"
   ],
   "icon": "https://raw.githubusercontent.com/andlo/ovos-skill-holidays/main/icon.png",
   "source": "https://github.com/andlo/ovos-skill-holidays",

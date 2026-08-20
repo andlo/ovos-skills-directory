@@ -11,7 +11,8 @@
     "wikipedia",
     "knowledge",
     "offline",
-    "reference"
+    "reference",
+    "information"
   ],
   "icon": "https://raw.githubusercontent.com/andlo/ovos-skill-wiki-offline/main/icon.png",
   "source": "https://github.com/andlo/ovos-skill-wiki-offline",

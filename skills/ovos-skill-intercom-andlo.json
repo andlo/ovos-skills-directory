@@ -11,7 +11,8 @@
     "intercom",
     "multi-device",
     "messaging",
-    "lan"
+    "lan",
+    "home"
   ],
   "icon": "https://raw.githubusercontent.com/andlo/ovos-skill-intercom/main/icon.png",
   "source": "https://github.com/andlo/ovos-skill-intercom",

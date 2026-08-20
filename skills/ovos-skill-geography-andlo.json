@@ -15,7 +15,8 @@
     "geography",
     "reference",
     "capitals",
-    "countries"
+    "countries",
+    "information"
   ],
   "icon": "https://raw.githubusercontent.com/andlo/ovos-skill-geography/main/icon.png",
   "source": "https://github.com/andlo/ovos-skill-geography",

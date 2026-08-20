@@ -11,7 +11,8 @@
     "research",
     "arxiv",
     "papers",
-    "provider"
+    "provider",
+    "information"
   ],
   "icon": "https://raw.githubusercontent.com/andlo/ovos-skill-arxiv-papers/main/book-512.png",
   "source": "https://github.com/andlo/ovos-skill-arxiv-papers",

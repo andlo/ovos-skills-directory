@@ -12,7 +12,8 @@
     "sleep",
     "focus",
     "white noise",
-    "relaxation"
+    "relaxation",
+    "daily"
   ],
   "icon": "https://raw.githubusercontent.com/andlo/ovos-skill-white-noise/main/icon.png",
   "source": "https://github.com/andlo/ovos-skill-white-noise",

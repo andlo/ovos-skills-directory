@@ -90,7 +90,8 @@
       "research",
       "arxiv",
       "papers",
-      "provider"
+      "provider",
+      "information"
     ],
     "icon": "https://raw.githubusercontent.com/andlo/ovos-skill-arxiv-papers/main/book-512.png",
     "source": "https://github.com/andlo/ovos-skill-arxiv-papers",
@@ -142,7 +143,8 @@
     "tags": [
       "calculator",
       "math",
-      "arithmetic"
+      "arithmetic",
+      "utility"
     ],
     "icon": "https://raw.githubusercontent.com/andlo/ovos-skill-calculator/main/icon.png",
     "source": "https://github.com/andlo/ovos-skill-calculator",
@@ -258,7 +260,8 @@
       "geography",
       "reference",
       "capitals",
-      "countries"
+      "countries",
+      "information"
     ],
     "icon": "https://raw.githubusercontent.com/andlo/ovos-skill-geography/main/icon.png",
     "source": "https://github.com/andlo/ovos-skill-geography",
@@ -315,7 +318,8 @@
       "geometry",
       "reference",
       "math",
-      "shapes"
+      "shapes",
+      "information"
     ],
     "icon": "https://raw.githubusercontent.com/andlo/ovos-skill-geometry/main/icon.png",
     "source": "https://github.com/andlo/ovos-skill-geometry",
@@ -397,7 +401,8 @@
       "holidays",
       "calendar",
       "date",
-      "easter"
+      "easter",
+      "daily"
     ],
     "icon": "https://raw.githubusercontent.com/andlo/ovos-skill-holidays/main/icon.png",
     "source": "https://github.com/andlo/ovos-skill-holidays",
@@ -449,7 +454,8 @@
       "intercom",
       "multi-device",
       "messaging",
-      "lan"
+      "lan",
+      "home"
     ],
     "icon": "https://raw.githubusercontent.com/andlo/ovos-skill-intercom/main/icon.png",
     "source": "https://github.com/andlo/ovos-skill-intercom",
@@ -584,7 +590,8 @@
       "scanner",
       "mdns",
       "discovery",
-      "lan"
+      "lan",
+      "utility"
     ],
     "icon": "https://raw.githubusercontent.com/andlo/ovos-skill-network-scanner/main/icon.png",
     "source": "https://github.com/andlo/ovos-skill-network-scanner",
@@ -768,7 +775,8 @@
       "sleep",
       "focus",
       "white noise",
-      "relaxation"
+      "relaxation",
+      "daily"
     ],
     "icon": "https://raw.githubusercontent.com/andlo/ovos-skill-white-noise/main/icon.png",
     "source": "https://github.com/andlo/ovos-skill-white-noise",
@@ -794,7 +802,8 @@
       "wikipedia",
       "knowledge",
       "offline",
-      "reference"
+      "reference",
+      "information"
     ],
     "icon": "https://raw.githubusercontent.com/andlo/ovos-skill-wiki-offline/main/icon.png",
     "source": "https://github.com/andlo/ovos-skill-wiki-offline",
