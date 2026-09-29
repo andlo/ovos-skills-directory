@@ -5,7 +5,8 @@
   "examples": [
     "set intercom name to living room",
     "set intercom code to four seven two nine",
-    "send a message to the bedroom"
+    "send a message to the bedroom",
+    "send a message to the bedroom saying dinner is ready"
   ],
   "tags": [
     "intercom",
@@ -17,7 +18,7 @@
   "icon": "https://raw.githubusercontent.com/andlo/ovos-skill-intercom/main/icon.png",
   "source": "https://github.com/andlo/ovos-skill-intercom",
   "package_name": "ovos-skill-intercom",
-  "pypi_version": "0.0.4",
+  "pypi_version": "0.0.5",
   "license": "GPL-3.0-or-later",
   "author": "andlo",
   "in_ovos_store": false,

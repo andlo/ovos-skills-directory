@@ -16,7 +16,7 @@
     "icon": "https://raw.githubusercontent.com/andlo/ovos-skill-365tomorrows-stories/main/book-512.png",
     "source": "https://github.com/andlo/ovos-skill-365tomorrows-stories",
     "package_name": "ovos-skill-365tomorrows-stories",
-    "pypi_version": "0.1.5",
+    "pypi_version": "0.1.6",
     "license": "GPL-3.0-or-later",
     "author": "andlo",
     "in_ovos_store": false,
@@ -218,30 +218,31 @@
     "requires_api_key": false
   },
   {
-    "skill_id": "ovos-skill-fairytales.andlo",
-    "name": "Fairy Tales",
-    "description": "Tells fairy tales by Hans Christian Andersen and the Brothers Grimm.",
+    "skill_id": "ovos-skill-fart.andlo",
+    "name": "Fart",
+    "description": "Makes your voice assistant fart - on request or at random - and deny everything afterwards. Fully offline.",
     "examples": [
-      "tell me a story about Cinderella",
-      "read me a fairy tale",
-      "continue the story"
+      "fart",
+      "did you fart",
+      "fart randomly",
+      "stop farting"
     ],
     "tags": [
+      "fun",
+      "humor",
       "entertainment",
-      "stories",
-      "fairytales",
-      "andersen",
-      "grimm"
+      "prank",
+      "fart"
     ],
-    "icon": "https://raw.githubusercontent.com/andlo/ovos-skill-fairytales/master/story-512.png",
-    "source": "https://github.com/andlo/ovos-skill-fairytales",
-    "package_name": "ovos-skill-fairytales",
-    "pypi_version": "0.1.0",
+    "icon": "https://raw.githubusercontent.com/andlo/ovos-skill-fart/main/icon.png",
+    "source": "https://github.com/andlo/ovos-skill-fart",
+    "package_name": "ovos-skill-fart",
+    "pypi_version": "1.0.0",
     "license": "GPL-3.0-or-later",
     "author": "andlo",
     "in_ovos_store": false,
     "pipeline": null,
-    "connectivity": "online",
+    "connectivity": "offline",
     "requires_api_key": false
   },
   {
@@ -449,7 +450,8 @@
     "examples": [
       "set intercom name to living room",
       "set intercom code to four seven two nine",
-      "send a message to the bedroom"
+      "send a message to the bedroom",
+      "send a message to the bedroom saying dinner is ready"
     ],
     "tags": [
       "intercom",
@@ -461,7 +463,7 @@
     "icon": "https://raw.githubusercontent.com/andlo/ovos-skill-intercom/main/icon.png",
     "source": "https://github.com/andlo/ovos-skill-intercom",
     "package_name": "ovos-skill-intercom",
-    "pypi_version": "0.0.4",
+    "pypi_version": "0.0.5",
     "license": "GPL-3.0-or-later",
     "author": "andlo",
     "in_ovos_store": false,
@@ -494,7 +496,7 @@
     "icon": "https://raw.githubusercontent.com/andlo/ovos-skill-math-practice/main/icon.png",
     "source": "https://github.com/andlo/ovos-skill-math-practice",
     "package_name": "ovos-skill-math-practice",
-    "pypi_version": "0.0.4",
+    "pypi_version": "0.0.5",
     "license": "GPL-3.0-or-later",
     "author": "andlo",
     "in_ovos_store": false,
@@ -729,7 +731,7 @@
     "icon": "https://raw.githubusercontent.com/andlo/ovos-skill-convert/main/icon.png",
     "source": "https://github.com/andlo/ovos-skill-convert",
     "package_name": "ovos-skill-convert",
-    "pypi_version": "0.0.6",
+    "pypi_version": "0.0.8",
     "license": "GPL-3.0-or-later",
     "author": "andlo",
     "in_ovos_store": false,

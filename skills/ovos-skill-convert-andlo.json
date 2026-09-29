@@ -17,7 +17,7 @@
   "icon": "https://raw.githubusercontent.com/andlo/ovos-skill-convert/main/icon.png",
   "source": "https://github.com/andlo/ovos-skill-convert",
   "package_name": "ovos-skill-convert",
-  "pypi_version": "0.0.6",
+  "pypi_version": "0.0.8",
   "license": "GPL-3.0-or-later",
   "author": "andlo",
   "in_ovos_store": false,
