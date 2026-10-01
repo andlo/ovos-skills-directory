@@ -16,7 +16,7 @@
   "icon": "https://raw.githubusercontent.com/andlo/ovos-skill-horoscope-readings/main/book-512.png",
   "source": "https://github.com/andlo/ovos-skill-horoscope-readings",
   "package_name": "ovos-skill-horoscope-readings",
-  "pypi_version": "0.1.3",
+  "pypi_version": "0.1.5",
   "license": "GPL-3.0-or-later",
   "author": "andlo",
   "in_ovos_store": false,

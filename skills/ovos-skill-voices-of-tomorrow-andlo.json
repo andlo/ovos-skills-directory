@@ -15,7 +15,7 @@
   "icon": "https://raw.githubusercontent.com/andlo/ovos-skill-voices-of-tomorrow/main/ui/icon.png",
   "source": "https://github.com/andlo/ovos-skill-voices-of-tomorrow",
   "package_name": "ovos-skill-voices-of-tomorrow",
-  "pypi_version": "0.1.1",
+  "pypi_version": "0.1.2",
   "license": "GPL-3.0-or-later",
   "author": "andlo",
   "in_ovos_store": false,

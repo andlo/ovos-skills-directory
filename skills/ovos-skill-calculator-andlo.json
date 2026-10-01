@@ -16,7 +16,7 @@
   "icon": "https://raw.githubusercontent.com/andlo/ovos-skill-calculator/main/icon.png",
   "source": "https://github.com/andlo/ovos-skill-calculator",
   "package_name": "ovos-skill-calculator",
-  "pypi_version": "0.0.2",
+  "pypi_version": "0.0.3",
   "license": "GPL-3.0-or-later",
   "author": "andlo",
   "in_ovos_store": false,
