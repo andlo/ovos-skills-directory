@@ -2,10 +2,7 @@
   "skill_id": "ovos-skill-cosquin-tales.andlo",
   "name": "Cosquin Tales (provider)",
   "description": "Emmanuel Cosquin's Lorraine folk tales provider for ovos-common-reading-pipeline-plugin. French only, no translation.",
-  "examples": [
-    "Tell me a story from cosquin",
-    "Tell me a fairy tale from lorraine"
-  ],
+  "examples": [],
   "tags": [
     "entertainment",
     "stories",

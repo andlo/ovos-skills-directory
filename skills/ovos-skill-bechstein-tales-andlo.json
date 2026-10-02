@@ -2,10 +2,7 @@
   "skill_id": "ovos-skill-bechstein-tales.andlo",
   "name": "Bechstein Tales (provider)",
   "description": "Ludwig Bechstein's German fairy tales provider for ovos-common-reading-pipeline-plugin. German only, no translation.",
-  "examples": [
-    "Tell me a story from bechstein",
-    "Tell me a fairy tale from ludwig bechstein"
-  ],
+  "examples": [],
   "tags": [
     "entertainment",
     "stories",

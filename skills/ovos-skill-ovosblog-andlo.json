@@ -16,7 +16,7 @@
   "icon": "https://raw.githubusercontent.com/andlo/ovos-skill-ovosblog/main/world-512.png",
   "source": "https://github.com/andlo/ovos-skill-ovosblog",
   "package_name": "ovos-skill-ovosblog",
-  "pypi_version": "0.1.7",
+  "pypi_version": "0.1.8",
   "license": "GPL-3.0-or-later",
   "author": "andlo",
   "in_ovos_store": false,
