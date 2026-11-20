@@ -17,7 +17,7 @@
   "source": "https://github.com/andlo/ovos-skill-ovosblog",
   "package_name": "ovos-skill-ovosblog",
   "pypi_version": "0.1.8",
-  "license": "GPL-3.0-or-later",
+  "license": "Apache-2.0",
   "author": "andlo",
   "in_ovos_store": false,
   "pipeline": "ovos-common-reading-pipeline-plugin",
